@@ -32,6 +32,7 @@ public class Affiche_produit {
 		rs=ps.executeQuery();
 		while (rs.next()) {
 			produit_Bean obj_produit_Bean=new produit_Bean();
+			System.out.println(rs.getString("idProduit"));
 			System.out.println(rs.getString("nameProduit"));
 			System.out.println(rs.getString("descriptionProduit"));
 			System.out.println(rs.getString("prix"));
@@ -39,6 +40,7 @@ public class Affiche_produit {
 			System.out.println(rs.getString("categorie  "));
 			
 			
+			obj_produit_Bean.setNameProduit(rs.getString("idProduit"));
 			obj_produit_Bean.setNameProduit(rs.getString("nameProduit"));
 			obj_produit_Bean.setDescriptionProduit(rs.getString("descriptionProduit"));
 			obj_produit_Bean.setPrix(rs.getString("prix"));

@@ -14,7 +14,7 @@ public class DB_Connection {
 		Connection connection=null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			connection =DriverManager.getConnection("jdbc:mysql://localhost:3306/jsp_crud","root","0000");
+			connection =DriverManager.getConnection("jdbc:mysql://localhost:3306/Stock_master","root","0000");
 			
 			
 		} catch (Exception e) {

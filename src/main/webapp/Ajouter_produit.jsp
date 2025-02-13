@@ -1,7 +1,7 @@
 
+<%@page import="common.produit_Bean"%>
+<%@page import="Crud.Affiche_produit"%>
 <%@page import="java.util.List, java.util.Iterator"%>
-
-
 
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -59,6 +59,24 @@
                     </tr>
                 </thead>
                 <tbody>
+                <% Affiche_produit obj_Affiche_produit=new Affiche_produit(); 
+                List<produit_Bean> list=obj_Affiche_produit.get_produit();
+                for(produit_Bean obj_Produit_Bean : list){%>
+                <td><%=obj_Produit_Bean.getNameProduit() %></td>
+                <td><%=obj_Produit_Bean.getDescriptionProduit()%></td>
+                <td><%=obj_Produit_Bean.getPrix() %></td>
+                <td><%= obj_Produit_Bean.getQuantite()%></td>
+                <td><%=obj_Produit_Bean.getCategorie() %></td>
+               
+                 
+                
+                
+                
+                
+                 <% } %>
+                
+                
+                
                     
                 </tbody>
             </table>
