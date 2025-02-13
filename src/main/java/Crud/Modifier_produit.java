@@ -41,7 +41,7 @@ public class Modifier_produit {
 		Connection connection=obj_DB_Connection.get_connection();
 		PreparedStatement ps=null;
 		try {
-		String querry="update user set user_name=?,email=?,mobile=? where sl_no=?";
+		String querry="update produits set nameProduit=?,descriptionProduit=?,prix=?,quantite =?,categorie=? where idProduit=?";
 		 ps=connection.prepareStatement(querry);
 		    ps.setString(1,obj_produit_Bean.getIdProduit());
 			ps.setString(2, obj_produit_Bean.getNameProduit());
