@@ -37,8 +37,11 @@
             <div class="mb-3">
                 <select id="categorie" name="categorie" class="form-select">
                     <option value="Électronique">Électronique</option>
-                    <option value="Vêtements">Vêtements</option>
-                    <option value="Alimentation">Alimentation</option>
+                    <option value="Vêtements">Beauté</option>
+                    <option value="Alimentation">Maison</option>
+                    <option  value="Vêtements">Vêtements</option>
+                    <option  value="Alimentation">Alimentation</option>
+                    
                 </select>
             </div>
             <button type="submit" class="btn btn-success w-100">Ajouter un produit</button>
@@ -61,6 +64,7 @@
             </table>
         </div>
     </div>
+    
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
