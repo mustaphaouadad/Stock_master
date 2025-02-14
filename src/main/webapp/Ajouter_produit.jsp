@@ -1,6 +1,6 @@
 
-<%@page import="common.produit_Bean"%>
-<%@page import="Crud.Affiche_produit"%>
+
+
 <%@page import="java.util.List, java.util.Iterator"%>
 
 
@@ -21,18 +21,18 @@
     <div class="container py-5">
         <h1 class="text-center mb-4">Liste des produits</h1>
 
-        <form id="ajouterProduitForm" class="bg-white p-4 rounded shadow-sm mb-4">
+        <form method="post" action="produitserv" class="bg-white p-4 rounded shadow-sm mb-4">
             <div class="mb-3">
-                <input type="text" id="nom" name="nom" placeholder="Nom du produit" class="form-control" required>
+                <input type="text" i name="nameProduit" placeholder="Nom du produit" class="form-control" required>
             </div>
             <div class="mb-3">
-                <input type="text" id="description" name="description" placeholder="Description" class="form-control">
+                <input type="text"  name="descriptionProduit" placeholder="Description" class="form-control">
             </div>
             <div class="mb-3">
-                <input type="number" id="quantite" name="quantite" placeholder="Quantité" class="form-control" required>
+                <input type="number"  name="prix" placeholder="Quantité" class="form-control" required>
             </div>
             <div class="mb-3">
-                <input type="number" id="prix" name="prix" step="0.01" placeholder="Prix" class="form-control" required>
+                <input type="number"  name="quantite" step="0.01" placeholder="Prix" class="form-control" required>
             </div>
             <div class="mb-3">
                 <select id="categorie" name="categorie" class="form-select">
@@ -59,21 +59,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                <% Affiche_produit obj_Affiche_produit=new Affiche_produit(); 
-                List<produit_Bean> list=obj_Affiche_produit.get_produit();
-                for(produit_Bean obj_Produit_Bean : list){%>
-                <td><%=obj_Produit_Bean.getNameProduit() %></td>
-                <td><%=obj_Produit_Bean.getDescriptionProduit()%></td>
-                <td><%=obj_Produit_Bean.getPrix() %></td>
-                <td><%= obj_Produit_Bean.getQuantite()%></td>
-                <td><%=obj_Produit_Bean.getCategorie() %></td>
                
-                 
-                
-                
-                
-                
-                 <% } %>
                 
                 
                 

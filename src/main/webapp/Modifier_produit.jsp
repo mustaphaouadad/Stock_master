@@ -1,5 +1,4 @@
-<%@page import="common.produit_Bean"%>
-<%@page import="Crud.Modifier_produit"%>
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -10,11 +9,6 @@
 </head>
 <body class="bg-light">
 
-<%
-String idProduit=(String)request.getParameter("idProduit");
-Modifier_produit obj_modifier_Produit=new Modifier_produit();
-produit_Bean obj_produit_Bean=obj_modifier_Produit.get_value_of_produit(idProduit);
-%>
 <div class="container py-5">
         <h1 class="text-center mb-4"> Modifier Liste des produits</h1>
 
