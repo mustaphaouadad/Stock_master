@@ -9,6 +9,7 @@ public class Produit {
 	private BigDecimal prix;
 	private int quantite;
 	private Categorie categorie;
+	
 	public enum Categorie{
 		Électronique, Beauté, Maison, Vêtements, Alimentation
 	}
