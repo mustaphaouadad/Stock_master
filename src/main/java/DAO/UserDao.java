@@ -94,7 +94,7 @@ public class UserDao {
 				String descriptionProduit =( rs) .getString("descriptionProduit");
 				 BigDecimal prix =rs .getBigDecimal("prix");
 				int  quantite = rs .getInt("quantite");
-				Categorie categorie = rs .getCategorie("categorie").name();
+				Categorie categorie = Categorie.valueOf(rs.getString("categorie"));
 				
     		 }
 			}catch (SQLException e) {
